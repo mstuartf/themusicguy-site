@@ -100,50 +100,62 @@
             </div>
         </div>
         <!-- SECTION 2 -->
-        <SplitSection id="section-2" :flatten="false">
+        <SplitSection id="section-2" :flatten="true">
             <div slot="part-1" class="w-full h-full">
-                <div class="h-full w-full">
-                    <div class="h-1/2 w-full p-4 pb-2 md:pr-2">
-                        <div class="border-4 border-green w-full h-full bg-green-lighter"></div>
-                    </div>
-                    <div class="h-1/2 w-full p-4 pt-2 md:pr-2">
-                        <div class="border-4 border-green w-full h-full bg-green-lighter"></div>
-                    </div>
-                </div>
-            </div>
-            <div slot="part-2" class="w-full h-full">
-                <div class="h-full w-full">
-                    <div class="h-1/2 w-full p-4 pb-2 md:pl-2">
-                        <div class="border-4 border-yellow w-full h-full bg-yellow-lighter"></div>
-                    </div>
-                    <div class="h-1/2 w-full p-4 pt-2 md:pl-2">
-                        <div class="border-4 border-yellow w-full h-full bg-yellow-lighter"></div>
+                <div class="h-full w-full md:flex">
+                    <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pb-4 md:pr-4">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <img class="max-w-full max-h-full" src="./assets/img/The Music Guy - Website R3 AW-01.png"/>
+                        </div>
+                        </div>
+                        <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pt-4 md:pt-8 md:pb-4 md:pl-4">
+                            <AboutSection icon="acoustic" :color="brandGreen" :title="jsonCopy.SECTION_2.TITLE_1" :body="jsonCopy.SECTION_2.BLURB_1" class="md:px-8">
+                            </AboutSection>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div slot="part-2" class="w-full h-full">
+                    <div class="h-full w-full md:flex md:flex-row-reverse">
+                        <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pb-4 md:pb-8 md:pt-4 md:pl-4">
+                            <div class="w-full h-full flex items-center justify-center">
+                                <img class="max-w-full max-h-full" src="./assets/img/The Music Guy - Website R3 AW-02.png"/>
+                        </div>
+                            </div>
+                            <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pt-4 md:pr-4">
+                                <AboutSection icon="plugged-in" :color="brandPink" :title="jsonCopy.SECTION_2.TITLE_2" :body="jsonCopy.SECTION_2.BLURB_2" class="md:px-8">
+                                </AboutSection>
+                            </div>
+                        </div>
+                    </div>
         </SplitSection>
         <!-- SECTION 3 -->
         <SplitSection id="section-3" :flatten="true">
             <div slot="part-1" class="w-full h-full">
                 <div class="h-full w-full md:flex">
-                    <div class="h-1/2 w-full md:h-full md:w-1/2 p-4 pb-2 md:pr-2">
-                        <div class="border-4 border-red w-full h-full bg-red-lighter"></div>
-                    </div>
-                    <div class="h-1/2 w-full md:h-full md:w-1/2 p-4 pt-2 md:pt-4 md:pb-2 md:pl-2">
-                        <div class="border-4 border-red w-full h-full bg-red-lighter"></div>
-                    </div>
-                </div>
-            </div>
-            <div slot="part-2" class="w-full h-full">
-                <div class="h-full w-full md:flex">
-                    <div class="h-1/2 w-full md:h-full md:w-1/2 p-4 pb-2 md:pb-4 md:pt-2 md:pr-2">
-                        <div class="border-4 border-blue w-full h-full bg-blue-lighter"></div>
-                    </div>
-                    <div class="h-1/2 w-full md:h-full md:w-1/2 p-4 pt-2 md:pl-2">
-                        <div class="border-4 border-blue w-full h-full bg-blue-lighter"></div>
+                    <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pb-4 md:pr-4">
+                        <div class="w-full h-full flex items-center justify-center">
+                            <img class="max-w-full max-h-full" src="./assets/img/The Music Guy - Website R3 AW-03.png"/>
+                        </div>
+                        </div>
+                        <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pt-4 md:pt-8 md:pb-4 md:pl-4">
+                            <AboutSection icon="dj" :color="brandPurple" :title="jsonCopy.SECTION_2.TITLE_3" :body="jsonCopy.SECTION_2.BLURB_3" class="md:px-8">
+                            </AboutSection>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div slot="part-2" class="w-full h-full">
+                    <div class="h-full w-full md:flex md:flex-row-reverse">
+                        <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pb-4 md:pb-8 md:pt-4 md:pl-4">
+                            <div class="w-full h-full flex items-center justify-center">
+                                <img class="max-w-full max-h-full" src="./assets/img/The Music Guy - Website R3 AW-04.png"/>
+                            </div>
+                            </div>
+                            <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pt-4 md:pr-4">
+                                <AboutSection icon="logo" :color="brandBlue" :title="jsonCopy.SECTION_2.TITLE_4" :body="   jsonCopy.SECTION_2.BLURB_4" class="md:px-8">
+                                </AboutSection>
+                            </div>
+                        </div>
+                    </div>
         </SplitSection>
     </div>
 </template>
@@ -162,16 +174,19 @@ Vue.use(VueSVGIcon)
 import VueResource from 'vue-resource'
 Vue.use(VueResource)
 
+import copy from './assets/i8n/copy.json'
+import './assets/svg/compiled/dj'
 import './assets/svg/compiled/logo'
+import './assets/svg/compiled/acoustic'
+import './assets/svg/compiled/plugged-in'
+import './assets/css/tailwind.css'
 
 import FloatingHeader from './components/FloatingHeader.vue'
 import HeaderButton from './components/HeaderButton.vue'
 import AnimatedBurger from './components/AnimatedBurger.vue'
 import SplitSection from './components/SplitSection.vue'
+import AboutSection from './components/AboutSection.vue'
 
-import './assets/css/tailwind.css'
-
-import copy from './assets/i8n/copy.json'
 
 export default {
 
@@ -181,14 +196,19 @@ export default {
         FloatingHeader,
         HeaderButton,
         AnimatedBurger,
-        SplitSection
+        SplitSection,
+        AboutSection
     },
 
     data() {
         return {
             jsonCopy: copy,
             showModalMenu: false,
-            dropDownHeight: '0rem'
+            dropDownHeight: '0rem',
+            brandPink: '#e79e99',
+            brandGreen: '#569089',
+            brandPurple: '#9493b1',
+            brandBlue: '#547692'
         }
     },
 
