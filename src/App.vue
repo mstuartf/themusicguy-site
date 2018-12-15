@@ -104,26 +104,34 @@
             <div slot="part-1" class="w-full h-full">
                 <div class="h-full w-full md:flex">
                     <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pb-4 md:pr-4">
-                        <div class="w-full h-full flex items-center justify-center">
+                        <div class="w-full h-full flex items-center justify-center md:justify-end">
                             <img class="max-w-full max-h-full" src="./assets/img/The Music Guy - Website R3 AW-01.png"/>
                         </div>
                         </div>
                         <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pt-4 md:pt-8 md:pb-4 md:pl-4">
-                            <AboutSection icon="acoustic" :color="brandGreen" :title="jsonCopy.SECTION_2.TITLE_1" :body="jsonCopy.SECTION_2.BLURB_1" class="md:px-8">
-                            </AboutSection>
+                            <div class="w-full h-full text-center md:text-left">
+                                <AspectBox>
+                                    <AboutSection icon="acoustic" :color="brandGreen" :title="jsonCopy.SECTION_2.TITLE_1" :body="jsonCopy.SECTION_2.BLURB_1">
+                                    </AboutSection>
+                                </AspectBox>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div slot="part-2" class="w-full h-full">
                     <div class="h-full w-full md:flex md:flex-row-reverse">
                         <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pb-4 md:pb-8 md:pt-4 md:pl-4">
-                            <div class="w-full h-full flex items-center justify-center">
+                            <div class="w-full h-full flex items-center justify-center md:justify-start">
                                 <img class="max-w-full max-h-full" src="./assets/img/The Music Guy - Website R3 AW-02.png"/>
                         </div>
                             </div>
                             <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pt-4 md:pr-4">
-                                <AboutSection icon="plugged-in" :color="brandPink" :title="jsonCopy.SECTION_2.TITLE_2" :body="jsonCopy.SECTION_2.BLURB_2" class="md:px-8">
-                                </AboutSection>
+                                <div class="w-full h-full text-center md:text-right">
+                                    <AspectBox>
+                                        <AboutSection icon="plugged-in" :color="brandPink" :title="jsonCopy.SECTION_2.TITLE_2" :body="jsonCopy.SECTION_2.BLURB_2">
+                                        </AboutSection>
+                                    </AspectBox>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -133,26 +141,34 @@
             <div slot="part-1" class="w-full h-full">
                 <div class="h-full w-full md:flex">
                     <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pb-4 md:pr-4">
-                        <div class="w-full h-full flex items-center justify-center">
+                        <div class="w-full h-full flex items-center justify-center md:justify-end">
                             <img class="max-w-full max-h-full" src="./assets/img/The Music Guy - Website R3 AW-03.png"/>
                         </div>
                         </div>
                         <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pt-4 md:pt-8 md:pb-4 md:pl-4">
-                            <AboutSection icon="dj" :color="brandPurple" :title="jsonCopy.SECTION_2.TITLE_3" :body="jsonCopy.SECTION_2.BLURB_3" class="md:px-8">
-                            </AboutSection>
+                            <div class="w-full h-full text-center md:text-left">
+                                <AspectBox>
+                                    <AboutSection icon="dj" :color="brandPurple" :title="jsonCopy.SECTION_2.TITLE_3" :body="jsonCopy.SECTION_2.BLURB_3">
+                                    </AboutSection>
+                                </AspectBox>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div slot="part-2" class="w-full h-full">
                     <div class="h-full w-full md:flex md:flex-row-reverse">
                         <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pb-4 md:pb-8 md:pt-4 md:pl-4">
-                            <div class="w-full h-full flex items-center justify-center">
+                            <div class="w-full h-full flex items-center justify-center md:justify-start">
                                 <img class="max-w-full max-h-full" src="./assets/img/The Music Guy - Website R3 AW-04.png"/>
-                            </div>
+                        </div>
                             </div>
                             <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pt-4 md:pr-4">
-                                <AboutSection icon="logo" :color="brandBlue" :title="jsonCopy.SECTION_2.TITLE_4" :body="   jsonCopy.SECTION_2.BLURB_4" class="md:px-8">
-                                </AboutSection>
+                                <div class="w-full h-full text-center md:text-right">
+                                    <AspectBox>
+                                        <AboutSection icon="logo" :color="brandBlue" :title="jsonCopy.SECTION_2.TITLE_4" :body="jsonCopy.SECTION_2.BLURB_4">
+                                        </AboutSection>
+                                    </AspectBox>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -186,6 +202,7 @@ import HeaderButton from './components/HeaderButton.vue'
 import AnimatedBurger from './components/AnimatedBurger.vue'
 import SplitSection from './components/SplitSection.vue'
 import AboutSection from './components/AboutSection.vue'
+import AspectBox from './components/AspectBox.vue'
 
 
 export default {
@@ -197,7 +214,8 @@ export default {
         HeaderButton,
         AnimatedBurger,
         SplitSection,
-        AboutSection
+        AboutSection,
+        AspectBox
     },
 
     data() {
