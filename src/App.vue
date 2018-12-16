@@ -5,7 +5,7 @@
         <FloatingHeader :break-point="200">
             <!-- DESKTOP FLOATING HEADER-->
             <div class="w-full h-full px-8 hidden md:flex justify-between items-center">
-                <img src="./assets/img/The Music Guy - Website R3 Icons-01.png" class="h-8"/>
+                <img src="./assets/img/icon_1.png" class="h-8"/>
                 <ul class="list-reset flex">
                     <li class="mr-6">
                         <HeaderButton element-id="section-1" class="h-text">
@@ -26,7 +26,7 @@
             </div>
             <!-- MOBILE FLOATING HEADER -->
             <div class="w-full h-full px-4 flex md:hidden justify-between items-center">
-                <img src="./assets/img/The Music Guy - Website R3 Icons-01.png" class="h-8"/>
+                <img src="./assets/img/icon_1.png" class="h-8"/>
                 <AnimatedBurger :open="showModalMenu" class="" :color="colors.darkGrey" @burger-toggle="toggled($event)">
                 </AnimatedBurger>
             </div>
@@ -35,7 +35,7 @@
         <div class="w-full bg-white fixed smooth-header overflow-hidden z-50" :style="{'height': dropDownHeight}">
             <!-- another burger menu overlay -->
             <div class="w-full px-4 flex justify-between items-center h-16">
-                <img src="./assets/img/The Music Guy - Website R3 Icons-01.png" class="h-8"/>
+                <img src="./assets/img/icon_1.png" class="h-8"/>
                 <AnimatedBurger :open="showModalMenu" :color="colors.darkGrey" @burger-toggle="toggled($event)">
                 </AnimatedBurger>
             </div>
@@ -64,7 +64,7 @@
         <div id="section-1" class="w-full h-full flex flex-col">
             <!-- DESKTOP SECTION 1 HEADER -->
             <div class="h-16 px-8 hidden md:flex items-center justify-between bg-white">
-                <img src="./assets/img/The Music Guy - Website R3 Icons-01.png" class="h-8"/>
+                <img src="./assets/img/icon_1.png" class="h-8"/>
                 <ul class="list-reset flex">
                     <li class="mr-6">
                         <HeaderButton element-id="section-1" class="h-text">
@@ -85,7 +85,7 @@
             </div>
             <!-- MOBILE SECTION 1 HEADER -->
             <div class="h-16 px-4 flex items-center justify-between md:hidden bg-white">
-                <img src="./assets/img/The Music Guy - Website R3 Icons-01.png" class="h-8"/>
+                <img src="./assets/img/icon_1.png" class="h-8"/>
                 <AnimatedBurger :open="showModalMenu" :color="colors.darkGrey" @burger-toggle="toggled($event)">
                 </AnimatedBurger>
             </div>
@@ -110,7 +110,7 @@
                 <div class="h-full w-full md:flex">
                     <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pb-4 md:pr-4">
                         <div class="w-full h-full flex items-center justify-center md:justify-end">
-                            <img class="max-w-full max-h-full" src="./assets/img/The Music Guy - Website R3 AW-01.png"/>
+                            <img class="max-w-full max-h-full" src="./assets/img/about_1.png"/>
                         </div>
                         </div>
                         <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pt-4 md:pt-8 md:pb-4 md:pl-4">
@@ -127,7 +127,7 @@
                     <div class="h-full w-full md:flex md:flex-row-reverse">
                         <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pb-4 md:pb-8 md:pt-4 md:pl-4">
                             <div class="w-full h-full flex items-center justify-center md:justify-start">
-                                <img class="max-w-full max-h-full" src="./assets/img/The Music Guy - Website R3 AW-02.png"/>
+                                <img class="max-w-full max-h-full" src="./assets/img/about_2.png"/>
                         </div>
                             </div>
                             <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pt-4 md:pr-4">
@@ -147,7 +147,7 @@
                 <div class="h-full w-full md:flex">
                     <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pb-4 md:pr-4">
                         <div class="w-full h-full flex items-center justify-center md:justify-end">
-                            <img class="max-w-full max-h-full" src="./assets/img/The Music Guy - Website R3 AW-03.png"/>
+                            <img class="max-w-full max-h-full" src="./assets/img/about_3.png"/>
                         </div>
                         </div>
                         <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pt-4 md:pt-8 md:pb-4 md:pl-4">
@@ -164,7 +164,7 @@
                     <div class="h-full w-full md:flex md:flex-row-reverse">
                         <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pb-4 md:pb-8 md:pt-4 md:pl-4">
                             <div class="w-full h-full flex items-center justify-center md:justify-start">
-                                <img class="max-w-full max-h-full" src="./assets/img/The Music Guy - Website R3 AW-04.png"/>
+                                <img class="max-w-full max-h-full" src="./assets/img/about_4.png"/>
                         </div>
                             </div>
                             <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pt-4 md:pr-4">
@@ -201,7 +201,7 @@
                                     <div class="flex justify-center md:flex-col w-full">
                                         <div class="px-4 md:px-0 md:w-full flex items-center py-4">
                                             <a :href="'tel:' + jsonCopy.SECTION_4.INFO_NUMBER" target="_blank" class="h-8">
-                                            <img src="./assets/img/The Music Guy - Website R3 Icons-02.png" class="h-full" />
+                                            <img src="./assets/img/icon_2.png" class="h-full" />
                                         </a>
                                             <div class="hidden md:block px-4 font-bold">
                                                 <p>{{ jsonCopy.SECTION_4.INFO_NUMBER }}</p>
@@ -209,7 +209,7 @@
                                         </div>
                                         <div class="px-4 md:px-0 md:w-full flex items-center py-4">
                                             <a :href="'mailto:' + jsonCopy.SECTION_4.INFO_EMAIL" class="h-8">
-                                            <img src="./assets/img/The Music Guy - Website R3 Icons-03.png" class="h-full" />
+                                            <img src="./assets/img/icon_3.png" class="h-full" />
                                         </a>
                                             <div class="hidden md:block px-4 font-bold">
                                                 <p>{{ jsonCopy.SECTION_4.INFO_EMAIL }}</p>
@@ -217,7 +217,7 @@
                                         </div>
                                         <div class="px-4 md:px-0 md:w-full flex items-center py-4">
                                             <a :href="'https://www.facebook.com/' + jsonCopy.SECTION_4.INFO_FACEBOOK" target="_blank" class="h-8">
-                                            <img src="./assets/img/The Music Guy - Website R3 Icons-04.png" class="h-full" />
+                                            <img src="./assets/img/icon_4.png" class="h-full" />
                                         </a>
                                             <div class="hidden md:block px-4 font-bold">
                                                 <p>{{ jsonCopy.SECTION_4.INFO_FACEBOOK }}</p>
@@ -329,7 +329,7 @@ export default {
 </script>
 <style>
 body {
-    background-image: url('./assets/img/The Music Guy - Website R3 Texture-01.png');
+    background-image: url('./assets/img/texture.png');
 }
 
 h1,
