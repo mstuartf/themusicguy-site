@@ -5,7 +5,7 @@
         <FloatingHeader :break-point="200">
             <!-- DESKTOP FLOATING HEADER-->
             <div class="w-full h-full px-8 hidden md:flex justify-between items-center">
-                <svgicon icon="logo" height="3rem" :color="colors.darkGrey"></svgicon>
+                <img src="./assets/img/The Music Guy - Website R3 Icons-01.png" class="h-8"/>
                 <ul class="list-reset flex">
                     <li class="mr-6">
                         <HeaderButton element-id="section-1" class="h-text">
@@ -26,7 +26,7 @@
             </div>
             <!-- MOBILE FLOATING HEADER -->
             <div class="w-full h-full px-4 flex md:hidden justify-between items-center">
-                <svgicon icon="logo" height="3rem" :color="colors.darkGrey"></svgicon>
+                <img src="./assets/img/The Music Guy - Website R3 Icons-01.png" class="h-8"/>
                 <AnimatedBurger :open="showModalMenu" class="" :color="colors.darkGrey" @burger-toggle="toggled($event)">
                 </AnimatedBurger>
             </div>
@@ -35,7 +35,7 @@
         <div class="w-full bg-white fixed smooth-header overflow-hidden z-50" :style="{'height': dropDownHeight}">
             <!-- another burger menu overlay -->
             <div class="w-full px-4 flex justify-between items-center h-16">
-                <svgicon icon="logo" height="3rem" :color="colors.darkGrey"></svgicon>
+                <img src="./assets/img/The Music Guy - Website R3 Icons-01.png" class="h-8"/>
                 <AnimatedBurger :open="showModalMenu" :color="colors.darkGrey" @burger-toggle="toggled($event)">
                 </AnimatedBurger>
             </div>
@@ -64,7 +64,7 @@
         <div id="section-1" class="w-full h-full flex flex-col">
             <!-- DESKTOP SECTION 1 HEADER -->
             <div class="h-16 px-8 hidden md:flex items-center justify-between bg-white">
-                <svgicon icon="logo" height="3rem" :color="colors.darkGrey"></svgicon>
+                <img src="./assets/img/The Music Guy - Website R3 Icons-01.png" class="h-8"/>
                 <ul class="list-reset flex">
                     <li class="mr-6">
                         <HeaderButton element-id="section-1" class="h-text">
@@ -84,8 +84,8 @@
                 </ul>
             </div>
             <!-- MOBILE SECTION 1 HEADER -->
-            <div class="h-16 px-4 flex items-center justify-between md:hidden">
-                <svgicon icon="logo" height="3rem" :color="colors.darkGrey"></svgicon>
+            <div class="h-16 px-4 flex items-center justify-between md:hidden bg-white">
+                <img src="./assets/img/The Music Guy - Website R3 Icons-01.png" class="h-8"/>
                 <AnimatedBurger :open="showModalMenu" :color="colors.darkGrey" @burger-toggle="toggled($event)">
                 </AnimatedBurger>
             </div>
@@ -99,7 +99,7 @@
                 </div>
             </div>
             <div class="h-24 flex items-center justify-center p-4 pt-2">
-                <div class="w-full h-full flex items-center justify-center">
+                <div class="w-full h-full flex items-center justify-center text-center">
                     <h2>{{ jsonCopy.SECTION_1.TAGLINE }}</h2>
                 </div>
             </div>
@@ -185,36 +185,37 @@
                 <table class="w-full">
                     <tr>
                         <td class="p-8 md:px-12 block w-full md:table-cell md:w-1/2 h-full align-top">
-                            
-                                <div class="w-full flex justify-center md:justify-end">
-                                    <div class="w-full max-w-24 flex flex-col items-start">
-                                        <div class="text-center md:text-left w-full">
-                                            <h3 class="py-2">{{ jsonCopy.SECTION_4.TITLE }}</h3>
-                                            <div class="pt-1 pb-4 flex justify-center md:justify-start">
-                                                <span class="about-divider green-line"></span>
-                                            </div>
+                            <div class="w-full flex justify-center md:justify-end">
+                                <div class="w-full max-w-24 flex flex-col items-start">
+                                    <div class="text-center md:text-left w-full">
+                                        <h3 class="py-2">{{ jsonCopy.SECTION_4.TITLE }}</h3>
+                                        <div class="pt-1 pb-4 flex justify-center md:justify-start">
+                                            <span class="about-divider green-line"></span>
                                         </div>
-                                        <div class="max-w-24 pt-2 pb-4">
-                                            <p>{{ jsonCopy.SECTION_4.INFO_TEXT }}</p>
+                                    </div>
+                                    <div class="max-w-24 pt-2 pb-4">
+                                        <p>{{ jsonCopy.SECTION_4.INFO_TEXT }}</p>
+                                    </div>
+                                    <div class="w-full flex items-center py-4">
+                                        <img src="./assets/img/The Music Guy - Website R3 Icons-02.png" class="h-8" />
+                                        <div class="px-4 font-bold">
+                                            <p>{{ jsonCopy.SECTION_4.INFO_NUMBER }}</p>
                                         </div>
-                                        <div class="w-full flex items-center py-4">
-                                            <div class="px-4 font-bold">
-                                                <p>{{ jsonCopy.SECTION_4.INFO_NUMBER }}</p>
-                                            </div>
+                                    </div>
+                                    <div class="w-full flex items-center py-4">
+                                        <img src="./assets/img/The Music Guy - Website R3 Icons-03.png" class="h-8" />
+                                        <div class="px-4 font-bold">
+                                            <p>{{ jsonCopy.SECTION_4.INFO_EMAIL }}</p>
                                         </div>
-                                        <div class="w-full flex items-center py-4">
-                                            <div class="px-4 font-bold">
-                                                <p>{{ jsonCopy.SECTION_4.INFO_EMAIL }}</p>
-                                            </div>
-                                        </div>
-                                        <div class="w-full flex items-center py-4">
-                                            <div class="px-4 font-bold">
-                                                <p>{{ jsonCopy.SECTION_4.INFO_FACEBOOK }}</p>
-                                            </div>
+                                    </div>
+                                    <div class="w-full flex items-center py-4">
+                                        <img src="./assets/img/The Music Guy - Website R3 Icons-04.png" class="h-8" />
+                                        <div class="px-4 font-bold">
+                                            <p>{{ jsonCopy.SECTION_4.INFO_FACEBOOK }}</p>
                                         </div>
                                     </div>
                                 </div>
-                            
+                            </div>
                         </td>
                         <td class="p-8 md:px-12 block w-full md:table-cell md:w-1/2 h-full align-top">
                             <MessageForm></MessageForm>
@@ -317,7 +318,6 @@ export default {
 }
 </script>
 <style>
-
 body {
     background-image: url('./assets/img/The Music Guy - Website R3 Texture-01.png');
 }
