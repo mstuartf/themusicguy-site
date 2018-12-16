@@ -23,6 +23,24 @@
         "BLURB_3": "As the light fades, party with your family and friends as The Music Guy delivers an eclectic mix of trusted floor fillers that’ll keep your guests singing and dancing into the early hours.",
         "TITLE_4": "Package",
         "BLURB_4": "Sourcing music for your wedding or event can so often be just another stress to add to a seemingly endless list of things to prepare for your special day. Whether it be a live performance of your favourite song as you walk down the aisle, ambient acoustic music, an upbeat live set  or finding a DJ - booking all of these key ingredients can prove a daunting task. The Music Guy takes the stress away. A one stop shop of musical expertise, The Music Guy will provide all of the above."
+    },
+
+    "CONTACT_FORM":
+    {
+        "TITLE": "Send a Message",
+        "NAME_LABEL": "Name(s)",
+        "EMAIL_LABEL": "Email address",
+        "MESSAGE_LABEL": "Message",
+        "SEND_BUTTON": "Send",
+        "POPUP_HEADER": "Thanks!",
+        "POPUP_MESSAGE": "Thanks for your enquiry. I'll be in touch soon!",
+        "POPUP_BUTTON": "OK",
+        "POPUP_ERROR_HEADER": "Oops!",
+        "POPUP_ERROR_MESSAGE": "Something went wrong. If you are unable to send a message, please send an email to hey@themusicguy.co.uk.",
+        "POPUP_ERROR_BUTTON": "OK",
+        "POPUP_INVALID_HEADER": "Invalid Email",
+        "POPUP_INVALID_MESSAGE": "Please check that the email address you have entered is valid.",
+        "POPUP_INVALID_BUTTON": "OK"
     }
 
 }

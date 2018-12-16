@@ -1,5 +1,7 @@
 <template>
     <div id="app" class="w-full h-full">
+        <!-- OVERLAY ON FIRST PAGE LOAD WHILE HERO IMAGE LOADS -->
+        <LoadingOverlay class="bg-white" :class="{'show': underMinLoadingTime}"></LoadingOverlay>
         <FloatingHeader :break-point="200">
             <!-- DESKTOP FLOATING HEADER-->
             <div class="w-full h-full px-8 hidden md:flex justify-between items-center">
@@ -16,7 +18,7 @@
                         </HeaderButton>
                     </li>
                     <li>
-                        <HeaderButton element-id="section-3" class="h-text">
+                        <HeaderButton element-id="section-4" class="h-text">
                             {{ jsonCopy.HEADER.SECTION_3_BUTTON }}
                         </HeaderButton>
                     </li>
@@ -51,7 +53,7 @@
                         </HeaderButton>
                     </li>
                     <li class="p-4 text-center">
-                        <HeaderButton element-id="section-3" class="h-text" @HeaderButtonClicked="toggled(false)">
+                        <HeaderButton element-id="section-4" class="h-text" @HeaderButtonClicked="toggled(false)">
                             {{ jsonCopy.HEADER.SECTION_3_BUTTON }}
                         </HeaderButton>
                     </li>
@@ -75,7 +77,7 @@
                         </HeaderButton>
                     </li>
                     <li>
-                        <HeaderButton element-id="section-3" class="h-text">
+                        <HeaderButton element-id="section-4" class="h-text">
                             {{ jsonCopy.HEADER.SECTION_3_BUTTON }}
                         </HeaderButton>
                     </li>
@@ -91,8 +93,8 @@
             <div class="flex-auto relative">
                 <div class="w-full h-full absolute">
                     <div class="w-full h-full flex items-center justify-center bg-brand-black">
-                        <iframe id="tmg-video" src="https://player.vimeo.com/video/293414793" width="100%" height="100%" allow="autoplay" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>
+                        <!--<iframe id="tmg-video" src="https://player.vimeo.com/video/293414793" width="100%" height="100%" allow="autoplay" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                        </iframe>-->
                     </div>
                 </div>
             </div>
@@ -176,6 +178,14 @@
                         </div>
                     </div>
         </SplitSection>
+        <!-- SECTION 3 -->
+        <SplitSection id="section-4">
+            <div slot="part-1" class="w-full h-full p-12">
+            </div>
+            <div slot="part-2" class="w-full h-full p-12">
+                <MessageForm></MessageForm>
+            </div>
+        </SplitSection>
     </div>
 </template>
 <script>
@@ -194,18 +204,21 @@ import VueResource from 'vue-resource'
 Vue.use(VueResource)
 
 import copy from './assets/i8n/copy.json'
-import './assets/svg/compiled/dj'
-import './assets/svg/compiled/logo'
-import './assets/svg/compiled/acoustic'
 import './assets/svg/compiled/plugged-in'
+import './assets/svg/compiled/acoustic'
+import './assets/svg/compiled/logo'
 import './assets/css/tailwind.css'
+import './assets/svg/compiled/dj'
 
 import FloatingHeader from './components/FloatingHeader.vue'
-import HeaderButton from './components/HeaderButton.vue'
 import AnimatedBurger from './components/AnimatedBurger.vue'
+import LoadingOverlay from './components/LoadingOverlay.vue'
+import HeaderButton from './components/HeaderButton.vue'
 import SplitSection from './components/SplitSection.vue'
 import AboutSection from './components/AboutSection.vue'
+import MessageForm from './components/MessageForm.vue'
 import AspectBox from './components/AspectBox.vue'
+
 
 
 export default {
@@ -218,6 +231,8 @@ export default {
         AnimatedBurger,
         SplitSection,
         AboutSection,
+        MessageForm,
+        LoadingOverlay,
         AspectBox
     },
 
@@ -226,6 +241,7 @@ export default {
             jsonCopy: copy,
             showModalMenu: false,
             dropDownHeight: '0rem',
+            underMinLoadingTime: true,
             colors: {
                 pink: '#e79e99',
                 green: '#569089',
@@ -243,20 +259,33 @@ export default {
         toggled(event) {
             this.showModalMenu = event;
             this.dropDownHeight = this.showModalMenu ? '100%' : '0rem';
-        }
+        },
 
+        minLoadingTime() {
+            setTimeout(() => {
+                this.underMinLoadingTime = false;
+            }, 3000)
+        },
+
+    },
+
+    mounted () {
+      this.minLoadingTime();
     }
 
 }
 </script>
 <style>
-
-h1, h2, h3, .h-text {
+h1,
+h2,
+h3,
+.h-text {
     font-family: 'Josefin Sans', sans-serif;
     color: #3A3A39;
 }
 
-p {
+p,
+.p-text {
     font-family: 'Open Sans', sans-serif;
     color: #505050;
 }
@@ -268,5 +297,4 @@ p {
 .smooth-header {
     transition: height 0.4s;
 }
-
 </style>
