@@ -178,14 +178,56 @@
                         </div>
                     </div>
         </SplitSection>
-        <!-- SECTION 3 -->
-        <SplitSection id="section-4">
-            <div slot="part-1" class="w-full h-full p-12">
+        <!-- SECTION 4 -->
+        <div id="section-4" class="w-full md:h-full flex flex-col">
+            <div class="h-16 px-8 flex items-center justify-center"></div>
+            <div class="flex-auto relative flex flex-col">
+                <table class="w-full">
+                    <tr>
+                        <td class="p-8 md:px-12 block w-full md:table-cell md:w-1/2 h-full align-top">
+                            
+                                <div class="w-full flex justify-center md:justify-end">
+                                    <div class="w-full max-w-24 flex flex-col items-start">
+                                        <div class="text-center md:text-left w-full">
+                                            <h3 class="py-2">{{ jsonCopy.SECTION_4.TITLE }}</h3>
+                                            <div class="pt-1 pb-4 flex justify-center md:justify-start">
+                                                <span class="about-divider green-line"></span>
+                                            </div>
+                                        </div>
+                                        <div class="max-w-24 pt-2 pb-4">
+                                            <p>{{ jsonCopy.SECTION_4.INFO_TEXT }}</p>
+                                        </div>
+                                        <div class="w-full flex items-center py-4">
+                                            <div class="px-4 font-bold">
+                                                <p>{{ jsonCopy.SECTION_4.INFO_NUMBER }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="w-full flex items-center py-4">
+                                            <div class="px-4 font-bold">
+                                                <p>{{ jsonCopy.SECTION_4.INFO_EMAIL }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="w-full flex items-center py-4">
+                                            <div class="px-4 font-bold">
+                                                <p>{{ jsonCopy.SECTION_4.INFO_FACEBOOK }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                        </td>
+                        <td class="p-8 md:px-12 block w-full md:table-cell md:w-1/2 h-full align-top">
+                            <MessageForm></MessageForm>
+                        </td>
+                    </tr>
+                </table>
+                <div class="h-48 md:flex-auto relative">
+                    <div class="absolute h-full w-full pin-t pin-l text-center pt-4 pb-24 md:pb-12">
+                        <svgicon icon="logo" height="100%" :color="colors.darkGrey"></svgicon>
+                    </div>
+                </div>
             </div>
-            <div slot="part-2" class="w-full h-full p-12">
-                <MessageForm></MessageForm>
-            </div>
-        </SplitSection>
+        </div>
     </div>
 </template>
 <script>
@@ -218,7 +260,6 @@ import SplitSection from './components/SplitSection.vue'
 import AboutSection from './components/AboutSection.vue'
 import MessageForm from './components/MessageForm.vue'
 import AspectBox from './components/AspectBox.vue'
-
 
 
 export default {
@@ -269,13 +310,18 @@ export default {
 
     },
 
-    mounted () {
-      this.minLoadingTime();
+    mounted() {
+        this.minLoadingTime();
     }
 
 }
 </script>
 <style>
+
+body {
+    background-image: url('./assets/img/The Music Guy - Website R3 Texture-01.png');
+}
+
 h1,
 h2,
 h3,
@@ -296,5 +342,13 @@ p,
 
 .smooth-header {
     transition: height 0.4s;
+}
+
+.pink-line {
+    background-color: #e79e99;
+}
+
+.green-line {
+    background-color: #569089;
 }
 </style>

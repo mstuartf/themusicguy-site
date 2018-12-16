@@ -5,7 +5,7 @@
         <div class="py-1 flex justify-center md:justify-start">
           <span class="about-divider" :style="{'background-color': color}"></span>
         </div>
-        <p class="py-2 text-grey-dark">{{ body }}</p>
+        <p class="py-2">{{ body }}</p>
     </div>
 </template>
 <script>

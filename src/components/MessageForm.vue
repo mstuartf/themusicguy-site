@@ -9,7 +9,7 @@
                 </div>
             </div>
             <!-- BODY -->
-            <div class="w-full">
+            <div class="w-full flex justify-center md:justify-start">
                 <div class="w-full max-w-24 flex flex-col items-center">
                     <input id="name-input" type="text" v-model="inputName" :placeholder="jsonCopy.CONTACT_FORM.NAME_LABEL" class="mb-3 text-base lg:text-lg appearance-none input-border w-full py-2 px-3 focus:outline-none p-text">
                     <input id="email-input" type="text" v-model="inputEmail" :placeholder="jsonCopy.CONTACT_FORM.EMAIL_LABEL" class="mb-3 text-base lg:text-lg appearance-none input-border w-full py-2 px-3 focus:outline-none p-text">
@@ -155,10 +155,6 @@ export default {
 #popup-background.loaded {
     visibility: visible;
     opacity: 1;
-}
-
-.pink-line {
-    background-color: #e79e99;
 }
 
 .noresize {
