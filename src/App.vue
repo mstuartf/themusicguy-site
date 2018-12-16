@@ -3,20 +3,20 @@
         <FloatingHeader :break-point="200">
             <!-- DESKTOP FLOATING HEADER-->
             <div class="w-full h-full px-8 hidden md:flex justify-between items-center">
-                <svgicon icon="logo" height="3rem" color="#b8c2cc"></svgicon>
+                <svgicon icon="logo" height="3rem" :color="colors.darkGrey"></svgicon>
                 <ul class="list-reset flex">
                     <li class="mr-6">
-                        <HeaderButton element-id="section-1" class="text-grey-dark">
+                        <HeaderButton element-id="section-1" class="h-text">
                             {{ jsonCopy.HEADER.SECTION_1_BUTTON }}
                         </HeaderButton>
                     </li>
                     <li class="mr-6">
-                        <HeaderButton element-id="section-2" class="text-grey-dark">
+                        <HeaderButton element-id="section-2" class="h-text">
                             {{ jsonCopy.HEADER.SECTION_2_BUTTON }}
                         </HeaderButton>
                     </li>
                     <li>
-                        <HeaderButton element-id="section-3" class="text-grey-dark">
+                        <HeaderButton element-id="section-3" class="h-text">
                             {{ jsonCopy.HEADER.SECTION_3_BUTTON }}
                         </HeaderButton>
                     </li>
@@ -24,8 +24,8 @@
             </div>
             <!-- MOBILE FLOATING HEADER -->
             <div class="w-full h-full px-4 flex md:hidden justify-between items-center">
-                <svgicon icon="logo" height="3rem" color="#b8c2cc"></svgicon>
-                <AnimatedBurger :open="showModalMenu" class="" color="#b8c2cc" @burger-toggle="toggled($event)">
+                <svgicon icon="logo" height="3rem" :color="colors.darkGrey"></svgicon>
+                <AnimatedBurger :open="showModalMenu" class="" :color="colors.darkGrey" @burger-toggle="toggled($event)">
                 </AnimatedBurger>
             </div>
         </FloatingHeader>
@@ -33,25 +33,25 @@
         <div class="w-full bg-white fixed smooth-header overflow-hidden z-50" :style="{'height': dropDownHeight}">
             <!-- another burger menu overlay -->
             <div class="w-full px-4 flex justify-between items-center h-16">
-                <svgicon icon="logo" height="3rem" color="#b8c2cc"></svgicon>
-                <AnimatedBurger :open="showModalMenu" color="#b8c2cc" @burger-toggle="toggled($event)">
+                <svgicon icon="logo" height="3rem" :color="colors.darkGrey"></svgicon>
+                <AnimatedBurger :open="showModalMenu" :color="colors.darkGrey" @burger-toggle="toggled($event)">
                 </AnimatedBurger>
             </div>
             <!-- div taking up remaining screen with negative margin so we can v-center ignoring burger-->
             <div class="h-full -mt-16 flex align-center justify-center">
                 <ul class="list-reset m-auto">
                     <li class="p-4 text-center">
-                        <HeaderButton element-id="section-1" class="text-grey-dark" @HeaderButtonClicked="toggled(false)">
+                        <HeaderButton element-id="section-1" class="h-text" @HeaderButtonClicked="toggled(false)">
                             {{ jsonCopy.HEADER.SECTION_1_BUTTON }}
                         </HeaderButton>
                     </li>
                     <li class="p-4 text-center">
-                        <HeaderButton element-id="section-2" class="text-grey-dark" @HeaderButtonClicked="toggled(false)">
+                        <HeaderButton element-id="section-2" class="h-text" @HeaderButtonClicked="toggled(false)">
                             {{ jsonCopy.HEADER.SECTION_2_BUTTON }}
                         </HeaderButton>
                     </li>
                     <li class="p-4 text-center">
-                        <HeaderButton element-id="section-3" class="text-grey-dark" @HeaderButtonClicked="toggled(false)">
+                        <HeaderButton element-id="section-3" class="h-text" @HeaderButtonClicked="toggled(false)">
                             {{ jsonCopy.HEADER.SECTION_3_BUTTON }}
                         </HeaderButton>
                     </li>
@@ -61,21 +61,21 @@
         <!-- SECTION 1 -->
         <div id="section-1" class="w-full h-full flex flex-col">
             <!-- DESKTOP SECTION 1 HEADER -->
-            <div class="h-16 px-8 hidden md:flex items-center justify-between">
-                <svgicon icon="logo" height="3rem" color="#b8c2cc"></svgicon>
+            <div class="h-16 px-8 hidden md:flex items-center justify-between bg-white">
+                <svgicon icon="logo" height="3rem" :color="colors.darkGrey"></svgicon>
                 <ul class="list-reset flex">
                     <li class="mr-6">
-                        <HeaderButton element-id="section-1" class="text-grey-dark">
+                        <HeaderButton element-id="section-1" class="h-text">
                             {{ jsonCopy.HEADER.SECTION_1_BUTTON }}
                         </HeaderButton>
                     </li>
                     <li class="mr-6">
-                        <HeaderButton element-id="section-2" class="text-grey-dark">
+                        <HeaderButton element-id="section-2" class="h-text">
                             {{ jsonCopy.HEADER.SECTION_2_BUTTON }}
                         </HeaderButton>
                     </li>
                     <li>
-                        <HeaderButton element-id="section-3" class="text-grey-dark">
+                        <HeaderButton element-id="section-3" class="h-text">
                             {{ jsonCopy.HEADER.SECTION_3_BUTTON }}
                         </HeaderButton>
                     </li>
@@ -83,19 +83,22 @@
             </div>
             <!-- MOBILE SECTION 1 HEADER -->
             <div class="h-16 px-4 flex items-center justify-between md:hidden">
-                <svgicon icon="logo" height="3rem" color="#b8c2cc"></svgicon>
-                <AnimatedBurger :open="showModalMenu" color="#b8c2cc" @burger-toggle="toggled($event)">
+                <svgicon icon="logo" height="3rem" :color="colors.darkGrey"></svgicon>
+                <AnimatedBurger :open="showModalMenu" :color="colors.darkGrey" @burger-toggle="toggled($event)">
                 </AnimatedBurger>
             </div>
             <!-- SECTION 1 CONTENT -->
             <div class="flex-auto relative">
-                <div class="w-full h-full absolute px-4 py-2">
-                    <div class="w-full h-full flex items-center justify-center border-4 border-orange bg-orange-lighter">
+                <div class="w-full h-full absolute">
+                    <div class="w-full h-full flex items-center justify-center bg-brand-black">
+                        <iframe id="tmg-video" src="https://player.vimeo.com/video/293414793" width="100%" height="100%" allow="autoplay" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
             </div>
             <div class="h-24 flex items-center justify-center p-4 pt-2">
-                <div class="w-full h-full flex items-center justify-center border-4 border-pink bg-pink-lighter">
+                <div class="w-full h-full flex items-center justify-center">
+                    <h2>{{ jsonCopy.SECTION_1.TAGLINE }}</h2>
                 </div>
             </div>
         </div>
@@ -111,7 +114,7 @@
                         <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pt-4 md:pt-8 md:pb-4 md:pl-4">
                             <div class="w-full h-full text-center md:text-left">
                                 <AspectBox>
-                                    <AboutSection icon="acoustic" :color="brandGreen" :title="jsonCopy.SECTION_2.TITLE_1" :body="jsonCopy.SECTION_2.BLURB_1">
+                                    <AboutSection icon="acoustic" :color="colors.green" :title="jsonCopy.SECTION_2.TITLE_1" :body="jsonCopy.SECTION_2.BLURB_1">
                                     </AboutSection>
                                 </AspectBox>
                             </div>
@@ -128,7 +131,7 @@
                             <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pt-4 md:pr-4">
                                 <div class="w-full h-full text-center md:text-right">
                                     <AspectBox>
-                                        <AboutSection icon="plugged-in" :color="brandPink" :title="jsonCopy.SECTION_2.TITLE_2" :body="jsonCopy.SECTION_2.BLURB_2">
+                                        <AboutSection icon="plugged-in" :color="colors.pink" :title="jsonCopy.SECTION_2.TITLE_2" :body="jsonCopy.SECTION_2.BLURB_2">
                                         </AboutSection>
                                     </AspectBox>
                                 </div>
@@ -148,7 +151,7 @@
                         <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pt-4 md:pt-8 md:pb-4 md:pl-4">
                             <div class="w-full h-full text-center md:text-left">
                                 <AspectBox>
-                                    <AboutSection icon="dj" :color="brandPurple" :title="jsonCopy.SECTION_2.TITLE_3" :body="jsonCopy.SECTION_2.BLURB_3">
+                                    <AboutSection icon="dj" :color="colors.purple" :title="jsonCopy.SECTION_2.TITLE_3" :body="jsonCopy.SECTION_2.BLURB_3">
                                     </AboutSection>
                                 </AspectBox>
                             </div>
@@ -165,7 +168,7 @@
                             <div class="h-1/2 w-full md:h-full md:w-1/2 p-8 pt-4 md:pr-4">
                                 <div class="w-full h-full text-center md:text-right">
                                     <AspectBox>
-                                        <AboutSection icon="logo" :color="brandBlue" :title="jsonCopy.SECTION_2.TITLE_4" :body="jsonCopy.SECTION_2.BLURB_4">
+                                        <AboutSection icon="logo" :color="colors.blue" :title="jsonCopy.SECTION_2.TITLE_4" :body="jsonCopy.SECTION_2.BLURB_4">
                                         </AboutSection>
                                     </AspectBox>
                                 </div>
@@ -223,10 +226,15 @@ export default {
             jsonCopy: copy,
             showModalMenu: false,
             dropDownHeight: '0rem',
-            brandPink: '#e79e99',
-            brandGreen: '#569089',
-            brandPurple: '#9493b1',
-            brandBlue: '#547692'
+            colors: {
+                pink: '#e79e99',
+                green: '#569089',
+                purple: '#9493b1',
+                blue: '#547692',
+                black: '#090D14',
+                grey: '#505050',
+                darkGrey: '#3A3A39',
+            }
         }
     },
 
@@ -242,11 +250,23 @@ export default {
 }
 </script>
 <style>
-body {
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+
+h1, h2, h3, .h-text {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #3A3A39;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    color: #505050;
+}
+
+.bg-brand-black {
+    background-color: #090D14;
 }
 
 .smooth-header {
     transition: height 0.4s;
 }
+
 </style>

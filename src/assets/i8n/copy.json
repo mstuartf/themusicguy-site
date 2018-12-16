@@ -1,16 +1,15 @@
 {
     "HEADER":
     {
-        "SECTION_1_BUTTON": "section 1",
-        "SECTION_2_BUTTON": "section 2",
-        "SECTION_3_BUTTON": "section 3"
+        "SECTION_1_BUTTON": "home",
+        "SECTION_2_BUTTON": "about",
+        "SECTION_3_BUTTON": "contact"
     },
 
     "SECTION_1":
 
     {
-        "TAGLINE": "this is the website tagline...",
-        "PLACEHOLDER": "LANDING IMAGE"
+        "TAGLINE": "the soundtrack to your day"
     },
 
     "SECTION_2":
