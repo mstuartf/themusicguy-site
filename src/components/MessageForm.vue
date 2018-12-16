@@ -27,8 +27,7 @@
         <LoadingOverlay class="bg-smoke-lighter" :class="{'show': sendingMessage}"></LoadingOverlay>
         <!-- SUCCESS POPUP -->
         <simple-popup :class="{'show': showPopup}">
-            <h1 slot="header"
-          class="text-grey-darker">
+            <h1 slot="header">
           {{ popupTitle }}
       </h1>
             <div slot="body" class="h-full w-full flex flex-col">
@@ -38,7 +37,7 @@
                     </p>
                 </div>
             </div>
-            <button slot="footer" class="px-3 py-2 bg-white input-border p-text" @click="togglePopup">
+            <button slot="footer" class="popup-button px-3 py-2 bg-white input-border p-text" @click="togglePopup">
                 {{ popupButton }}
             </button>
         </simple-popup>
@@ -145,7 +144,6 @@ export default {
 }
 </script>
 <style>
-
 #popup-background {
     visibility: hidden;
     opacity: 0;
@@ -169,6 +167,9 @@ input::placeholder,
 textarea::placeholder {
     color: #505050;
     opacity: 1;
-    /* Firefox */
+}
+
+.popup-button {
+    min-width: 4rem;
 }
 </style>

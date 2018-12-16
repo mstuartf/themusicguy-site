@@ -93,8 +93,8 @@
             <div class="flex-auto relative">
                 <div class="w-full h-full absolute">
                     <div class="w-full h-full flex items-center justify-center bg-brand-black">
-                        <!--<iframe id="tmg-video" src="https://player.vimeo.com/video/293414793" width="100%" height="100%" allow="autoplay" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                        </iframe>-->
+                        <iframe id="tmg-video" src="https://player.vimeo.com/video/293414793" width="100%" height="100%" allow="autoplay" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -188,7 +188,9 @@
                             <div class="w-full flex justify-center md:justify-end">
                                 <div class="w-full max-w-24 flex flex-col items-start">
                                     <div class="text-center md:text-left w-full">
-                                        <h3 class="py-2">{{ jsonCopy.SECTION_4.TITLE }}</h3>
+                                        <h3 class="py-2">
+                                            {{ jsonCopy.SECTION_4.TITLE }}
+                                        </h3>
                                         <div class="pt-1 pb-4 flex justify-center md:justify-start">
                                             <span class="about-divider green-line"></span>
                                         </div>
