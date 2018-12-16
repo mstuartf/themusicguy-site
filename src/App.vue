@@ -198,22 +198,30 @@
                                     <div class="max-w-24 pt-2 pb-4">
                                         <p>{{ jsonCopy.SECTION_4.INFO_TEXT }}</p>
                                     </div>
-                                    <div class="w-full flex items-center py-4">
-                                        <img src="./assets/img/The Music Guy - Website R3 Icons-02.png" class="h-8" />
-                                        <div class="px-4 font-bold">
-                                            <p>{{ jsonCopy.SECTION_4.INFO_NUMBER }}</p>
+                                    <div class="flex justify-center md:flex-col w-full">
+                                        <div class="px-4 md:px-0 md:w-full flex items-center py-4">
+                                            <a :href="'tel:' + jsonCopy.SECTION_4.INFO_NUMBER" target="_blank" class="h-8">
+                                            <img src="./assets/img/The Music Guy - Website R3 Icons-02.png" class="h-full" />
+                                        </a>
+                                            <div class="hidden md:block px-4 font-bold">
+                                                <p>{{ jsonCopy.SECTION_4.INFO_NUMBER }}</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="w-full flex items-center py-4">
-                                        <img src="./assets/img/The Music Guy - Website R3 Icons-03.png" class="h-8" />
-                                        <div class="px-4 font-bold">
-                                            <p>{{ jsonCopy.SECTION_4.INFO_EMAIL }}</p>
+                                        <div class="px-4 md:px-0 md:w-full flex items-center py-4">
+                                            <a :href="'mailto:' + jsonCopy.SECTION_4.INFO_EMAIL" class="h-8">
+                                            <img src="./assets/img/The Music Guy - Website R3 Icons-03.png" class="h-full" />
+                                        </a>
+                                            <div class="hidden md:block px-4 font-bold">
+                                                <p>{{ jsonCopy.SECTION_4.INFO_EMAIL }}</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="w-full flex items-center py-4">
-                                        <img src="./assets/img/The Music Guy - Website R3 Icons-04.png" class="h-8" />
-                                        <div class="px-4 font-bold">
-                                            <p>{{ jsonCopy.SECTION_4.INFO_FACEBOOK }}</p>
+                                        <div class="px-4 md:px-0 md:w-full flex items-center py-4">
+                                            <a :href="'https://www.facebook.com/' + jsonCopy.SECTION_4.INFO_FACEBOOK" target="_blank" class="h-8">
+                                            <img src="./assets/img/The Music Guy - Website R3 Icons-04.png" class="h-full" />
+                                        </a>
+                                            <div class="hidden md:block px-4 font-bold">
+                                                <p>{{ jsonCopy.SECTION_4.INFO_FACEBOOK }}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
