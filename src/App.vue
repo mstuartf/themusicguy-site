@@ -343,6 +343,7 @@ p,
 .p-text {
     font-family: 'Open Sans', sans-serif;
     color: #505050;
+    line-height: 1.7;
 }
 
 .bg-brand-black {
