@@ -2,7 +2,7 @@
     <div class="cursor-pointer" @mouseenter="mouseEnter" @mouseleave="mouseLeave">
         <a class="text-xl no-underline color-inherit"
            @click="$emit('HeaderButtonClicked')"
-           :href="'#' + elementId" v-smooth-scroll="{ duration: 1000 }">
+           :href="'#' + elementId" v-smooth-scroll="{ duration: 1000, offset: offsetPx || 0 }">
 
             <slot></slot>
 
@@ -46,7 +46,10 @@ export default {
 
     },
 
-    props: ['elementId']
+    props: {
+        'elementId': String,
+        'offsetPx': Number
+    }
 
 }
 </script>

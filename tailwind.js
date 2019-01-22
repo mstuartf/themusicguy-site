@@ -559,7 +559,9 @@ module.exports = {
     '1/6': '16.66667%',
     '5/6': '83.33333%',
     'full': '100%',
+    'full-header': 'calc(100% - 4rem)',
     '2/1': '200%',
+    '2/1-header': 'calc(200% - 4rem)',
     'screen': '100vh'
   },
 
