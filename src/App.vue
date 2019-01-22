@@ -53,7 +53,7 @@
                         </HeaderButton>
                     </li>
                     <li class="p-4 text-center">
-                        <HeaderButton element-id="section-4" class="h-text" :offset-px="-64" @HeaderButtonClicked="toggled(false)">
+                        <HeaderButton element-id="section-4" class="h-text" @HeaderButtonClicked="toggled(false)">
                             {{ jsonCopy.HEADER.SECTION_3_BUTTON }}
                         </HeaderButton>
                     </li>
@@ -180,6 +180,7 @@
         </SplitSection>
         <!-- SECTION 4 -->
         <div id="section-4" class="w-full md:h-full-header flex flex-col">
+            <div class="w-full h-16 md:hidden"></div>
             <div class="flex-auto relative flex flex-col">
                 <table class="w-full">
                     <tr>
@@ -215,11 +216,11 @@
                                             </div>
                                         </div>
                                         <div class="px-4 md:px-0 md:w-full flex items-center py-4">
-                                            <a :href="'https://www.facebook.com/' + jsonCopy.SECTION_4.INFO_FACEBOOK" target="_blank" class="h-8">
-                                            <img src="./assets/img/icon_4.png" class="h-full" />
+                                            <a :href="'https://www.instagram.com/' + jsonCopy.SECTION_4.INFO_INSTAGRAM" target="_blank" class="h-8">
+                                            <img src="./assets/img/icon_5.png" class="h-full" />
                                         </a>
                                             <div class="hidden md:block px-4 font-bold">
-                                                <p>{{ jsonCopy.SECTION_4.INFO_FACEBOOK }}</p>
+                                                <p>{{ jsonCopy.SECTION_4.INFO_INSTAGRAM }}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -232,7 +233,7 @@
                     </tr>
                 </table>
                 <div class="h-48 md:flex-auto relative">
-                    <div class="absolute h-48 w-full pin-t pin-l text-center pt-4 pb-24 md:pb-12">
+                    <div class="absolute h-48 md:h-32 w-full pin-t pin-l text-center pt-4 pb-24 md:pb-12">
                         <svgicon icon="logo" height="100%" :color="colors.darkGrey"></svgicon>
                     </div>
                 </div>
