@@ -48,7 +48,7 @@
                         </HeaderButton>
                     </li>
                     <li class="p-4 text-center">
-                        <HeaderButton element-id="section-2-mb" class="h-text" :offset-px="-64" @HeaderButtonClicked="toggled(false)">
+                        <HeaderButton element-id="section-2" class="h-text" :offset-px="-64" @HeaderButtonClicked="toggled(false)">
                             {{ jsonCopy.HEADER.SECTION_2_BUTTON }}
                         </HeaderButton>
                     </li>
@@ -105,129 +105,66 @@
             </div>
         </div>
 
-        <div id="section-2-mb" class="block md:hidden">
-
-            <div class="p-8">
-
-                <img class="max-w-full max-h-full" src="./assets/img/about_1.png"/>
-
-                <div class="pt-8">
-                    <AboutSection icon="acoustic" :color="colors.green" :title="jsonCopy.SECTION_2.TITLE_1" :body="jsonCopy.SECTION_2.BLURB_1">
-                    </AboutSection>
-                </div>
-
-            </div>
-
-            <div class="p-8">
-
-                <img class="max-w-full max-h-full" src="./assets/img/about_2.png"/>
-
-                <div class="pt-8">
-                    <AboutSection icon="plugged-in" :color="colors.pink" :title="jsonCopy.SECTION_2.TITLE_2" :body="jsonCopy.SECTION_2.BLURB_2">
-                    </AboutSection>
-                </div>
-
-            </div>
-
-            <div class="p-8">
-
-                <img class="max-w-full max-h-full" src="./assets/img/about_3.png"/>
-
-                <div class="pt-8">
-                    <AboutSection icon="dj" :color="colors.purple" :title="jsonCopy.SECTION_2.TITLE_3" :body="jsonCopy.SECTION_2.BLURB_3">
-                    </AboutSection>
-                </div>
-
-            </div>
-
-            <div class="p-8">
-
-                <img class="max-w-full max-h-full" src="./assets/img/about_4.png"/>
-
-                <div class="pt-8">
-                    <AboutSection icon="logo" :color="colors.blue" :title="jsonCopy.SECTION_2.TITLE_4" :body="jsonCopy.SECTION_2.BLURB_4">
-                    </AboutSection>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- SECTION 2 -->
-        <SplitSection id="section-2" :flatten="true">
-            <div slot="part-1" class="w-full h-full">
-                <div class="h-full w-full md:flex">
-                    <div class="h-full w-1/2 p-8 pb-8 pr-4">
-                        <div class="w-full h-full flex items-center justify-center md:justify-end">
+        <!-- stretch box height to fill screen underneath header -->
+        <div id="section-2" class="md:w-full md:h-full-header md:flex">
+            <div class="md:flex-auto md:relative">
+                <div class="md:w-full md:h-full md:absolute md:flex md:flex-col">
+                    <div class="md:flex md:w-full md:h-1/2">        
+                        <div class="md:h-full md:w-1/2 p-8 md:pr-4 md:flex items-center justify-end">
                             <img class="max-w-full max-h-full" src="./assets/img/about_1.png"/>
                         </div>
+                        <div class="md:h-full md:w-1/2 p-8 md:pl-4 md:text-left">
+                            <AspectBox>
+                                <AboutSection icon="acoustic" :color="colors.green" :title="jsonCopy.SECTION_2.TITLE_1" :body="jsonCopy.SECTION_2.BLURB_1">
+                                </AboutSection>
+                            </AspectBox>
                         </div>
-                        <div class="h-full w-1/2 p-8 pt-8 pb-8 pl-4">
-                            <div class="w-full h-full text-left">
-                                <AspectBox>
-                                    <AboutSection icon="acoustic" :color="colors.green" :title="jsonCopy.SECTION_2.TITLE_1" :body="jsonCopy.SECTION_2.BLURB_1">
-                                    </AboutSection>
-                                </AspectBox>
-                            </div>
+                   </div>
+                    <div class="md:flex md:w-full md:h-1/2 md:flex-row-reverse">
+                        <div class="md:h-full md:w-1/2 p-8 md:pl-4 md:flex items-center justify-start">
+                            <img class="max-w-full max-h-full" src="./assets/img/about_2.png"/>
+                        </div>
+                        <div class="md:h-full md:w-1/2 p-8 md:pr-4 text-right">
+                            <AspectBox>
+                                <AboutSection icon="plugged-in" :color="colors.pink" :title="jsonCopy.SECTION_2.TITLE_2" :body="jsonCopy.SECTION_2.BLURB_2">
+                                </AboutSection>
+                            </AspectBox>
                         </div>
                     </div>
                 </div>
-                <div slot="part-2" class="w-full h-full">
-                    <div class="h-full w-full flex flex-row-reverse">
-                        <div class="h-full w-1/2 p-8 pb-8 pt-8 pl-4">
-                            <div class="w-full h-full flex items-center justify-center md:justify-start">
-                                <img class="max-w-full max-h-full" src="./assets/img/about_2.png"/>
-                        </div>
-                            </div>
-                            <div class="h-full w-1/2 p-8 pt-8 pr-4">
-                                <div class="w-full h-full text-right">
-                                    <AspectBox>
-                                        <AboutSection icon="plugged-in" :color="colors.pink" :title="jsonCopy.SECTION_2.TITLE_2" :body="jsonCopy.SECTION_2.BLURB_2">
-                                        </AboutSection>
-                                    </AspectBox>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        </SplitSection>
-        <!-- SECTION 3 -->
-        <SplitSection id="section-3" :flatten="true">
-            <div slot="part-1" class="w-full h-full">
-                <div class="h-full w-full flex">
-                    <div class="h-full w-1/2 p-8 pb-8 pr-4">
-                        <div class="w-full h-full flex items-center justify-center md:justify-end">
+            </div>
+        </div>
+
+        <!-- stretch box height to fill screen underneath header -->
+        <div class="md:w-full md:h-full-header md:flex">
+            <div class="md:flex-auto md:relative">
+                <div class="md:w-full md:h-full md:absolute md:flex md:flex-col">
+                    <div class="md:flex md:w-full md:h-1/2">        
+                        <div class="md:h-full md:w-1/2 p-8 md:pr-4 md:flex items-center justify-end">
                             <img class="max-w-full max-h-full" src="./assets/img/about_3.png"/>
                         </div>
+                        <div class="md:h-full md:w-1/2 p-8 md:pl-4 md:text-left">
+                            <AspectBox>
+                                <AboutSection icon="dj" :color="colors.purple" :title="jsonCopy.SECTION_2.TITLE_3" :body="jsonCopy.SECTION_2.BLURB_3">
+                                </AboutSection>
+                            </AspectBox>
                         </div>
-                        <div class="h-full w-1/2 p-8 pt-8 pb-8 pl-4">
-                            <div class="w-full h-full text-left">
-                                <AspectBox>
-                                    <AboutSection icon="dj" :color="colors.purple" :title="jsonCopy.SECTION_2.TITLE_3" :body="jsonCopy.SECTION_2.BLURB_3">
-                                    </AboutSection>
-                                </AspectBox>
-                            </div>
+                   </div>
+                    <div class="md:flex md:w-full md:h-1/2 md:flex-row-reverse">
+                        <div class="md:h-full md:w-1/2 p-8 md:pl-4 md:flex items-center justify-start">
+                            <img class="max-w-full max-h-full" src="./assets/img/about_4.png"/>
+                        </div>
+                        <div class="md:h-full md:w-1/2 p-8 md:pr-4 text-right">
+                            <AspectBox>
+                                <AboutSection icon="logo" :color="colors.blue" :title="jsonCopy.SECTION_2.TITLE_4" :body="jsonCopy.SECTION_2.BLURB_4">
+                                </AboutSection>
+                            </AspectBox>
                         </div>
                     </div>
                 </div>
-                <div slot="part-2" class="w-full h-full">
-                    <div class="h-full w-full flex flex-row-reverse">
-                        <div class="h-full w-1/2 p-8 pb-8 pt-8 pl-4">
-                            <div class="w-full h-full flex items-center justify-center md:justify-start">
-                                <img class="max-w-full max-h-full" src="./assets/img/about_4.png"/>
-                        </div>
-                            </div>
-                            <div class="h-full w-1/2 p-8 pt-8 pr-4">
-                                <div class="w-full h-full text-right">
-                                    <AspectBox>
-                                        <AboutSection icon="logo" :color="colors.blue" :title="jsonCopy.SECTION_2.TITLE_4" :body="jsonCopy.SECTION_2.BLURB_4">
-                                        </AboutSection>
-                                    </AspectBox>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        </SplitSection>
+            </div>
+        </div>
+
         <!-- SECTION 4 -->
         <div id="section-4" class="w-full md:h-full-header flex flex-col">
             <div class="flex-auto relative flex flex-col">
