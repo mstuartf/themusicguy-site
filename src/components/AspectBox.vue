@@ -1,7 +1,7 @@
 <template>
     <div class="image-container">
         <img src="../assets/img/aspect.png"/>
-        <div class="duration">
+        <div class="duration flex items-center">
             <slot></slot>
         </div>
     </div>

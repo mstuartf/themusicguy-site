@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-2/1-header md:h-full-header flex flex-col">
+    <div class="w-full h-2/1-header md:h-full-header hidden md:flex flex-col">
         <div class="flex-auto relative">
             <div class="w-full h-full absolute">
                 <div id="123" class="w-full h-full flex flex-col" :class="{'md:flex-row': !flatten}">

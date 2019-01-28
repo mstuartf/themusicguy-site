@@ -48,12 +48,12 @@
                         </HeaderButton>
                     </li>
                     <li class="p-4 text-center">
-                        <HeaderButton element-id="section-2" class="h-text" :offset-px="-64" @HeaderButtonClicked="toggled(false)">
+                        <HeaderButton element-id="section-2-mb" class="h-text" :offset-px="-64" @HeaderButtonClicked="toggled(false)">
                             {{ jsonCopy.HEADER.SECTION_2_BUTTON }}
                         </HeaderButton>
                     </li>
                     <li class="p-4 text-center">
-                        <HeaderButton element-id="section-4" class="h-text" @HeaderButtonClicked="toggled(false)">
+                        <HeaderButton element-id="section-4" class="h-text" :offset-px="-64" @HeaderButtonClicked="toggled(false)">
                             {{ jsonCopy.HEADER.SECTION_3_BUTTON }}
                         </HeaderButton>
                     </li>
@@ -104,6 +104,56 @@
                 </div>
             </div>
         </div>
+
+        <div id="section-2-mb" class="block md:hidden">
+
+            <div class="p-8">
+
+                <img class="max-w-full max-h-full" src="./assets/img/about_1.png"/>
+
+                <div class="pt-8">
+                    <AboutSection icon="acoustic" :color="colors.green" :title="jsonCopy.SECTION_2.TITLE_1" :body="jsonCopy.SECTION_2.BLURB_1">
+                    </AboutSection>
+                </div>
+
+            </div>
+
+            <div class="p-8">
+
+                <img class="max-w-full max-h-full" src="./assets/img/about_2.png"/>
+
+                <div class="pt-8">
+                    <AboutSection icon="plugged-in" :color="colors.pink" :title="jsonCopy.SECTION_2.TITLE_2" :body="jsonCopy.SECTION_2.BLURB_2">
+                    </AboutSection>
+                </div>
+
+            </div>
+
+            <div class="p-8">
+
+                <img class="max-w-full max-h-full" src="./assets/img/about_3.png"/>
+
+                <div class="pt-8">
+                    <AboutSection icon="dj" :color="colors.purple" :title="jsonCopy.SECTION_2.TITLE_3" :body="jsonCopy.SECTION_2.BLURB_3">
+                    </AboutSection>
+                </div>
+
+            </div>
+
+            <div class="p-8">
+
+                <img class="max-w-full max-h-full" src="./assets/img/about_4.png"/>
+
+                <div class="pt-8">
+                    <AboutSection icon="logo" :color="colors.blue" :title="jsonCopy.SECTION_2.TITLE_4" :body="jsonCopy.SECTION_2.BLURB_4">
+                    </AboutSection>
+                </div>
+
+            </div>
+
+        </div>
+
+
         <!-- SECTION 2 -->
         <SplitSection id="section-2" :flatten="true">
             <div slot="part-1" class="w-full h-full">
@@ -180,7 +230,6 @@
         </SplitSection>
         <!-- SECTION 4 -->
         <div id="section-4" class="w-full md:h-full-header flex flex-col">
-            <div class="w-full h-16 md:hidden"></div>
             <div class="flex-auto relative flex flex-col">
                 <table class="w-full">
                     <tr>
