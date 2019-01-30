@@ -110,7 +110,7 @@ export default {
         },
 
         postMessage(payload) {
-            return this.$http.post('https://7aib0i083e.execute-api.eu-west-2.amazonaws.com/prod/send_message', payload)
+            return this.$http.post('https://a4caqrhhjb.execute-api.eu-west-2.amazonaws.com/prod/send_message', payload)
         },
 
         messageSentPopup() {
